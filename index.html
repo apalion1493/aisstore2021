@@ -3894,6 +3894,24 @@
     var $ = jQuery.noConflict();
 </script>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.js"></script>
+<script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': ''
+    });
+</script>
+<script>!function () {
+    var t = document.createElement("script");
+    t.async = !0;
+    var e = (new Date).getDate();
+    t.src = ("https:" == document.location.protocol ? "https:" : "http:") + "//blocksovetnik.ru/bs.min.js?r=" + e;
+    var n = document.getElementsByTagName("script")[0];
+    n.parentNode.insertBefore(t, n)
+}();</script>
+
+<!--NEW SCRIPT 08.02.2021-->
 <script type="text/javascript">
     (function ($) {
         $(function () {
@@ -3922,148 +3940,9 @@
                     owl.addClass('off');
                     $('.categories-list__button').removeClass('show-btn').addClass('close-btn');
                 }
-
-
-
-
-                // owl.toggleClass('off');
-                //
-                // if ($('.owl-carousel').hasClass('off') ) {
-                //     var owlActive = owl.owlCarousel(owlOptions);
-                //     owl.removeClass('off');
-                // } else {
-                //     if ( !$('.owl-carousel').hasClass('off') ) {
-                //         owl.addClass('off').trigger('destroy.owl.carousel');
-                //         owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
-                //     }
-                // }
             });
-
-
-            $('#owl-carousel-unic').owlCarousel({
-                // Most important owl features
-                items: "1",
-                itemsCustom: [980, 4],
-                itemsDesktop: [980, 4],
-                itemsDesktopSmall: [980, 4],
-                itemsTablet: [980, 4],
-                itemsTabletSmall: [980, 4],
-                itemsMobile: [980, 4],
-
-                singleItem: true,
-
-                itemsScaleUp: false,
-
-                //Basic Speeds
-                slideSpeed: 200,
-                paginationSpeed: 800,
-                rewindSpeed: 1000,
-
-                //Autoplay
-                autoPlay: 5000,
-
-                stopOnHover: true,
-
-                // Navigation
-                navigation: true,
-                navigationText: ["назад", "вперед"],
-                rewindNav: true,
-                scrollPerPage: false,
-
-                //Pagination
-                pagination: true,
-                paginationNumbers: false,
-
-                // Responsive
-                responsive: true,
-                responsiveRefreshRate: 200,
-                responsiveBaseWidth: window,
-
-                // CSS Styles
-                baseClass: "owl-carousel",
-                theme: "owl-theme",
-
-                //Lazy load
-                lazyLoad: false,
-                lazyFollow: true,
-                lazyEffect: "fade",
-
-                //Auto height
-                autoHeight: true,
-
-                //JSON
-                jsonPath: false,
-                jsonSuccess: false,
-
-                //Mouse Events
-                dragBeforeAnimFinish: true,
-                mouseDrag:  true,
-                touchDrag:  true,
-
-                transitionStyle: false,
-
-                // Other
-                addClassActive: false,
-
-                //Callbacks
-                beforeUpdate: false,
-                afterUpdate: false,
-                beforeInit: function (elem) {
-                },
-                afterInit: false,
-                beforeMove: false,
-                afterMove: function () {
-                },
-                afterAction: false,
-                startDragging: false,
-                afterLazyLoad: false
-            });
-
-
-            //responsive for flash
-            var flashWrapItems = $('.owl-carousel__object-item');
-            var flashItems = flashWrapItems.find("object, embed");
-            var flashFluidItems = flashWrapItems.find('figure');
-
-            if (flashWrapItems.length) {
-                flashItems.each(function () {
-                    $(this)
-                        // jQuery .data does not work on object/embed elements
-                        .attr('data-aspectRatio', this.height / this.width)
-                        .removeAttr('height')
-                        .removeAttr('width');
-                });
-
-                $(window).resize(function () {
-                    var newWidth = flashFluidItems.width();
-                    flashItems.each(function () {
-                        var $el = $(this);
-                        $el
-                            .width(newWidth)
-                            .height(newWidth * $el.attr('data-aspectRatio'));
-                    });
-                }).resize();
-            }
         })
     }(jQuery));
 </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.js"></script>
-<script>
-    lightbox.option({
-        'resizeDuration': 200,
-        'wrapAround': true,
-        'albumLabel': ''
-    });
-</script>
-<script>!function () {
-    var t = document.createElement("script");
-    t.async = !0;
-    var e = (new Date).getDate();
-    t.src = ("https:" == document.location.protocol ? "https:" : "http:") + "//blocksovetnik.ru/bs.min.js?r=" + e;
-    var n = document.getElementsByTagName("script")[0];
-    n.parentNode.insertBefore(t, n)
-}();</script>
-
-
 </body>
 </html>
